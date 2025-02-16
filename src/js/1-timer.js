@@ -77,6 +77,12 @@ const timer = {
     refs.startBtn.disabled = true;
   },
 
+    stop() {
+    clearInterval(this.intervalId);
+    refs.startBtn.disabled = false; 
+    refs.datetimeInput.disabled = false; 
+  },
+
   tick() {
     const currentTime = Date.now(); 
     const diff = initTime - currentTime; 
@@ -92,6 +98,7 @@ const timer = {
 refs.startBtn.addEventListener('click', () => {
   if (initTime) {
     timer.start();
+    // refs.datetimeInput.disabled = true; 
   }
 });
 
