@@ -94,3 +94,7 @@ refs.startBtn.addEventListener('click', () => {
     timer.start();
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  refs.startBtn.disabled = true;
+});

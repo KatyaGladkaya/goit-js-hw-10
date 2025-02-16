@@ -15,12 +15,38 @@
     />
 
     <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> Snackbar
-        </h1>
-        <load src="./partials/back-link.html" />
-      </div>
+      <form class="form">
+        <label class="form-label">
+          Delay (ms)
+          <input type="number" class="form-input-delay" name="delay" required />
+        </label>
+
+        <fieldset class="fieldset input">
+          <legend>State</legend>
+          <label class="fs-label">
+            <input
+              type="radio"
+              class="form-input"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label class="fs-label">
+            <input
+              type="radio"
+              class="form-input"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button type="submit" class="form-btn">Create notification</button>
+      </form>
     </main>
 
     <script type="module" src="./js/2-snackbar.js"></script>
