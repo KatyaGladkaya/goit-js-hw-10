@@ -15,11 +15,12 @@ const datetimePicker = flatpickr("#datetime-picker", {
 });
 
 const refs = {
-  startBtn: document.querySelector('[data-start]'),
+  startBtn: document.querySelector('.button'),
   clockFaceSeconds: document.querySelector('.js-seconds-value'),
   clockFaceMinutes: document.querySelector('.js-minutes-value'),
   clockFaceHours: document.querySelector('.js-hours-value'),
   clockFaceDays: document.querySelector('.js-days-value'),
+  datetimeInput: document.querySelector('.input'), 
 };
 
 let initTime = null;
@@ -98,7 +99,6 @@ const timer = {
 refs.startBtn.addEventListener('click', () => {
   if (initTime) {
     timer.start();
-    // refs.datetimeInput.disabled = true; 
   }
 });
 
